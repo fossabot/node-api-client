@@ -11,6 +11,7 @@ const SupplyChains = require('./endpoints/supplychains')
 const UploadUrl = require('./endpoints/upload-url')
 const Users = require('./endpoints/users')
 const Materials = require('./endpoints/materials')
+const Certificates = require('./endpoints/certificates')
 
 class Client {
 	constructor(url = 'https://api.retraced.co') {
@@ -27,6 +28,7 @@ class Client {
 		this.uploadUrl = new UploadUrl(url)
 		this.users = new Users(url)
 		this.materials = new Materials(url)
+		this.certificates = new Certificates(url)
 	}
 }
 
