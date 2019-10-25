@@ -53,7 +53,13 @@ class Companies extends Endpoint {
 	}
 
 	delete(accessToken, id, {deleteUsers = false}) {
-		return this.requestJSON(accessToken, 'DELETE', `companies/${id}`, {deleteUsers}, schemas.company.delete.querystring)
+		return this.requestJSON(
+			accessToken,
+			'DELETE',
+			`companies/${id}`,
+			{deleteUsers},
+			schemas.request.company.delete.querystring
+		)
 	}
 
 	find(accessToken, {country, taxNo}) {
