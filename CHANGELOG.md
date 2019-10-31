@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/retracedgmbh/node-api-client/compare/v1.1.1...v1.2.0) (2019-10-31)
+
+
+### Features
+
+* Search + Configuration endpoint ([#4](https://github.com/retracedgmbh/node-api-client/issues/4)) ([7496a36](https://github.com/retracedgmbh/node-api-client/commit/7496a36c8f931f5fb10123a0e508adfe67668398))
+
 ## [1.1.1](https://github.com/retracedgmbh/node-api-client/compare/v1.1.0...v1.1.1) (2019-10-25)
 
 # [1.1.0](https://github.com/retracedgmbh/node-api-client/compare/v1.0.2...v1.1.0) (2019-10-25)
