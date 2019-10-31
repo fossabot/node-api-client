@@ -12,6 +12,8 @@ const UploadUrl = require('./endpoints/upload-url')
 const Users = require('./endpoints/users')
 const Materials = require('./endpoints/materials')
 const Certificates = require('./endpoints/certificates')
+const Configuration = require('./endpoints/configuration')
+const Search = require('./endpoints/search')
 
 class Client {
 	constructor(url = 'https://api.retraced.co') {
@@ -29,6 +31,8 @@ class Client {
 		this.users = new Users(url)
 		this.materials = new Materials(url)
 		this.certificates = new Certificates(url)
+		this.configuration = new Configuration(url)
+		this.search = new Search(url)
 	}
 }
 
