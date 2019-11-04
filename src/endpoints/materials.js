@@ -1,3 +1,4 @@
+const {stringify} = require('query-string')
 const schemas = require('@retracedgmbh/schemas')
 const Endpoint = require('../endpoint')
 
@@ -32,6 +33,26 @@ class Materials extends Endpoint {
 
 	reject(accessToken, id, version) {
 		return this.requestJSON(accessToken, 'PUT', `materials/${id}/${version}/reject`)
+	}
+
+	list(accessToken, {status = undefined, sort = undefined}, {page = undefined, count = undefined}) {
+		return this.requestJSON(
+			accessToken,
+			'GET',
+			`materials?${stringify({
+				status,
+				sort,
+				page,
+				count
+			})}`,
+			{
+				status,
+				sort,
+				page,
+				count
+			},
+			schemas.request.material.list.querystring
+		)
 	}
 
 	delete(accessToken, id, version) {

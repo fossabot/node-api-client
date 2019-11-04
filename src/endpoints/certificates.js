@@ -1,3 +1,4 @@
+const {stringify} = require('query-string')
 const schemas = require('@retracedgmbh/schemas')
 const Endpoint = require('../endpoint')
 
@@ -31,6 +32,26 @@ class Certificates extends Endpoint {
 
 	reject(accessToken, id, version) {
 		return this.requestJSON(accessToken, 'PUT', `certificates/${id}/${version}/reject`)
+	}
+
+	list(accessToken, {status = undefined, sort = undefined}, {page = undefined, count = undefined}) {
+		return this.requestJSON(
+			accessToken,
+			'GET',
+			`certificates?${stringify({
+				status,
+				sort,
+				page,
+				count
+			})}`,
+			{
+				status,
+				sort,
+				page,
+				count
+			},
+			schemas.request.certificate.list.querystring
+		)
 	}
 
 	delete(accessToken, id, version) {
