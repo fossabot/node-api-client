@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/retracedgmbh/node-api-client/compare/v1.2.0...v1.3.0) (2019-11-04)
+
+
+### Features
+
+* Material + Certificate list endpoint ([#5](https://github.com/retracedgmbh/node-api-client/issues/5)) ([cfba9b7](https://github.com/retracedgmbh/node-api-client/commit/cfba9b743616be4c6aa2e5a839ade55c785a03ce))
+
 # [1.2.0](https://github.com/retracedgmbh/node-api-client/compare/v1.1.1...v1.2.0) (2019-10-31)
 
 
