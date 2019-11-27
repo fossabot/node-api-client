@@ -58,6 +58,28 @@
       "complexity": "off"
     }
   },
+  "renovate": {
+    "extends": [
+      "config:base"
+    ],
+    "timezone": "Europe/London",
+    "schedule": "before 6am",
+    "automerge": true,
+    "ignoreDeps": [
+      "@retracedgmbh/schemas"
+    ],
+    "commitMessagePrefix": "chore: ",
+    "commitMessageAction": "Upgrade",
+    "commitMessageSuffix": " :rocket:",
+    "packageRules": [
+      {
+        "packagePatterns": [
+          "^@semantic-release"
+        ],
+        "groupName": "semantic-release packages"
+      }
+    ]
+  },
   "release": {
     "plugins": [
       [
