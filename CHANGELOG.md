@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/retracedgmbh/node-api-client/compare/v1.4.0...v1.4.1) (2019-11-29)
+
+
+### Bug Fixes
+
+* claim update endpoint ([fe29033](https://github.com/retracedgmbh/node-api-client/commit/fe290336895e017e13b8506b34222437b9877a95))
+
 # [1.4.0](https://github.com/retracedgmbh/node-api-client/compare/v1.3.5...v1.4.0) (2019-11-29)
 
 
