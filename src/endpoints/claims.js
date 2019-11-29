@@ -136,16 +136,32 @@ class Claims extends Endpoint {
 		)
 	}
 
-	update(accessToken, id, version, {title, description, externalLink, pictures}) {
+	update(
+		accessToken,
+		id,
+		version,
+		{
+			geojson,
+			explanation,
+			referenceClaimId,
+			referenceClaimVersion,
+			claimingBadgeVersion,
+			claimingCertificateVersion,
+			files
+		}
+	) {
 		return this.requestJSON(
 			accessToken,
 			'PUT',
 			`claims/${id}/${version}`,
 			{
-				title,
-				description,
-				externalLink,
-				pictures
+				geojson,
+				explanation,
+				referenceClaimId,
+				referenceClaimVersion,
+				claimingBadgeVersion,
+				claimingCertificateVersion,
+				files
 			},
 			schemas.request.claim.update.body
 		)
