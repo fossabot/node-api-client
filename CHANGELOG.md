@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/retracedgmbh/node-api-client/compare/v1.3.5...v1.4.0) (2019-11-29)
+
+
+### Features
+
+* new approval cycle ([#7](https://github.com/retracedgmbh/node-api-client/issues/7)) ([00f0369](https://github.com/retracedgmbh/node-api-client/commit/00f0369ce09efd92e430a9e5a2111f06ef3309eb))
+
 ## [1.3.5](https://github.com/retracedgmbh/node-api-client/compare/v1.3.4...v1.3.5) (2019-11-28)
 
 ## [1.3.4](https://github.com/retracedgmbh/node-api-client/compare/v1.3.3...v1.3.4) (2019-11-28)
