@@ -2,40 +2,42 @@ const {stringify} = require('query-string')
 const schemas = require('@retracedgmbh/schemas')
 const Endpoint = require('../endpoint')
 
-class Certificates extends Endpoint {
-	create(accessToken, {title, description, externalLink, pictures}) {
+class Badges extends Endpoint {
+	create(accessToken, {title, icon, category, description, rule, pictures}) {
 		return this.requestJSON(
 			accessToken,
 			'POST',
-			'certificates',
+			'badges',
 			{
 				title,
+				icon,
+				category,
 				description,
-				externalLink,
+				rule,
 				pictures
 			},
-			schemas.request.certificate.create.body
+			schemas.request.badge.create.body
 		)
 	}
 
 	get(accessToken, id) {
-		return this.requestJSON(accessToken, 'GET', `certificates/${id}`)
+		return this.requestJSON(accessToken, 'GET', `badges/${id}`)
 	}
 
 	getVersion(accessToken, id, version) {
-		return this.requestJSON(accessToken, 'GET', `certificates/${id}/${version}`)
+		return this.requestJSON(accessToken, 'GET', `badges/${id}/${version}`)
 	}
 
 	approve(accessToken, id, version) {
-		return this.requestJSON(accessToken, 'PUT', `certificates/${id}/${version}/approve`)
+		return this.requestJSON(accessToken, 'PUT', `badges/${id}/${version}/approve`)
 	}
 
 	reject(accessToken, id, version) {
-		return this.requestJSON(accessToken, 'PUT', `certificates/${id}/${version}/reject`)
+		return this.requestJSON(accessToken, 'PUT', `badges/${id}/${version}/reject`)
 	}
 
 	acknowledge(accessToken, id, version) {
-		return this.requestJSON(accessToken, 'PUT', `certificates/${id}/${version}/acknowledge`)
+		return this.requestJSON(accessToken, 'PUT', `badges/${id}/${version}/acknowledge`)
 	}
 
 	list(
@@ -52,7 +54,7 @@ class Certificates extends Endpoint {
 		return this.requestJSON(
 			accessToken,
 			'GET',
-			`certificates?${stringify({
+			`badges?${stringify({
 				status,
 				sort,
 				isActive,
@@ -70,47 +72,51 @@ class Certificates extends Endpoint {
 				page,
 				count
 			},
-			schemas.request.certificate.list.querystring
+			schemas.request.badge.list.querystring
 		)
 	}
 
 	remove(accessToken, id, version) {
-		return this.requestJSON(accessToken, 'PUT', `certificates/${id}/${version}/remove`)
+		return this.requestJSON(accessToken, 'PUT', `badges/${id}/${version}/remove`)
 	}
 
 	request(accessToken, id, version) {
-		return this.requestJSON(accessToken, 'PUT', `certificates/${id}/${version}/request`)
+		return this.requestJSON(accessToken, 'PUT', `badges/${id}/${version}/request`)
 	}
 
-	createNewVersion(accessToken, id, {title, description, externalLink, pictures}) {
+	createNewVersion(accessToken, id, {title, icon, category, description, rule, pictures}) {
 		return this.requestJSON(
 			accessToken,
 			'POST',
-			`certificates/${id}`,
+			`badges/${id}`,
 			{
 				title,
+				icon,
+				category,
 				description,
-				externalLink,
+				rule,
 				pictures
 			},
-			schemas.request.certificate.update.body
+			schemas.request.badge.update.body
 		)
 	}
 
-	update(accessToken, id, version, {title, description, externalLink, pictures}) {
+	update(accessToken, id, version, {title, icon, category, description, rule, pictures}) {
 		return this.requestJSON(
 			accessToken,
 			'PUT',
-			`certificates/${id}/${version}`,
+			`badges/${id}/${version}`,
 			{
 				title,
+				icon,
+				category,
 				description,
-				externalLink,
+				rule,
 				pictures
 			},
-			schemas.request.certificate.update.body
+			schemas.request.badge.update.body
 		)
 	}
 }
 
-module.exports = Certificates
+module.exports = Badges

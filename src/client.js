@@ -12,6 +12,8 @@ const UploadUrl = require('./endpoints/upload-url')
 const Users = require('./endpoints/users')
 const Materials = require('./endpoints/materials')
 const Certificates = require('./endpoints/certificates')
+const Claims = require('./endpoints/claims')
+const Badges = require('./endpoints/badges')
 const Configuration = require('./endpoints/configuration')
 const Search = require('./endpoints/search')
 
@@ -31,6 +33,8 @@ class Client {
 		this.users = new Users(url)
 		this.materials = new Materials(url)
 		this.certificates = new Certificates(url)
+		this.claims = new Claims(url)
+		this.badges = new Badges(url)
 		this.configuration = new Configuration(url)
 		this.search = new Search(url)
 	}

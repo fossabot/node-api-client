@@ -22,7 +22,7 @@ class Companies extends Endpoint {
 			website,
 			latitude,
 			longitude,
-			i18n
+			description
 		}
 	) {
 		return this.requestJSON(
@@ -46,7 +46,7 @@ class Companies extends Endpoint {
 				website,
 				latitude,
 				longitude,
-				i18n
+				description
 			},
 			schemas.request.company.create.body
 		)
@@ -118,7 +118,7 @@ class Companies extends Endpoint {
 			website,
 			latitude,
 			longitude,
-			i18n
+			description
 		}
 	) {
 		return this.requestJSON(
@@ -140,7 +140,7 @@ class Companies extends Endpoint {
 				website,
 				latitude,
 				longitude,
-				i18n
+				description
 			},
 			schemas.request.company.update.body
 		)

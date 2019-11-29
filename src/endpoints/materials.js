@@ -35,19 +35,47 @@ class Materials extends Endpoint {
 		return this.requestJSON(accessToken, 'PUT', `materials/${id}/${version}/reject`)
 	}
 
-	list(accessToken, {status = undefined, sort = undefined}, {page = undefined, count = undefined}) {
+	acknowledge(accessToken, id, version) {
+		return this.requestJSON(accessToken, 'PUT', `materials/${id}/${version}/acknowledge`)
+	}
+
+	remove(accessToken, id, version) {
+		return this.requestJSON(accessToken, 'PUT', `materials/${id}/${version}/remove`)
+	}
+
+	request(accessToken, id, version) {
+		return this.requestJSON(accessToken, 'PUT', `materials/${id}/${version}/request`)
+	}
+
+	list(
+		accessToken,
+		{
+			status = undefined,
+			sort = undefined,
+			isActive = undefined,
+			isMarkedForRemoval = undefined,
+			isDropdown = undefined
+		},
+		{page = undefined, count = undefined}
+	) {
 		return this.requestJSON(
 			accessToken,
 			'GET',
 			`materials?${stringify({
 				status,
 				sort,
+				isActive,
+				isMarkedForRemoval,
+				isDropdown,
 				page,
 				count
 			})}`,
 			{
 				status,
 				sort,
+				isActive,
+				isMarkedForRemoval,
+				isDropdown,
 				page,
 				count
 			},
@@ -55,14 +83,10 @@ class Materials extends Endpoint {
 		)
 	}
 
-	delete(accessToken, id, version) {
-		return this.requestJSON(accessToken, 'DELETE', `materials/${id}/${version}`)
-	}
-
-	update(accessToken, id, {title, description, externalLink, categories, pictures}) {
+	createNewVersion(accessToken, id, {title, description, externalLink, categories, pictures}) {
 		return this.requestJSON(
 			accessToken,
-			'PUT',
+			'POST',
 			`materials/${id}`,
 			{
 				title,
@@ -75,7 +99,7 @@ class Materials extends Endpoint {
 		)
 	}
 
-	updateVersion(accessToken, id, version, {title, description, externalLink, categories, pictures}) {
+	update(accessToken, id, version, {title, description, externalLink, categories, pictures}) {
 		return this.requestJSON(
 			accessToken,
 			'PUT',
