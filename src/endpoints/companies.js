@@ -62,6 +62,10 @@ class Companies extends Endpoint {
 		)
 	}
 
+	remove(accessToken, id) {
+		return this.requestJSON(accessToken, 'PUT', `companies/${id}/remove`)
+	}
+
 	find(accessToken, {country, taxNo}) {
 		return this.requestJSON(
 			accessToken,
