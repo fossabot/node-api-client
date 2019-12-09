@@ -69,7 +69,8 @@ class Claims extends Endpoint {
 			sort = undefined,
 			isActive = undefined,
 			isMarkedForRemoval = undefined,
-			isDropdown = undefined
+			isDropdown = undefined,
+			companyId = undefined
 		},
 		{page = undefined, count = undefined}
 	) {
@@ -82,6 +83,7 @@ class Claims extends Endpoint {
 				isActive,
 				isMarkedForRemoval,
 				isDropdown,
+				companyId,
 				page,
 				count
 			})}`,
@@ -91,6 +93,7 @@ class Claims extends Endpoint {
 				isActive,
 				isMarkedForRemoval,
 				isDropdown,
+				companyId,
 				page,
 				count
 			},
