@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/retracedgmbh/node-api-client/compare/v1.4.6...v1.5.0) (2019-12-10)
+
+
+### Features
+
+* GeoJSON and archive option for assets ([#13](https://github.com/retracedgmbh/node-api-client/issues/13)) ([fe4ef66](https://github.com/retracedgmbh/node-api-client/commit/fe4ef666308c551258fbffa4bfc508c06f00c917))
+
 ## [1.4.6](https://github.com/retracedgmbh/node-api-client/compare/v1.4.5...v1.4.6) (2019-12-09)
 
 ## [1.4.5](https://github.com/retracedgmbh/node-api-client/compare/v1.4.4...v1.4.5) (2019-12-03)
