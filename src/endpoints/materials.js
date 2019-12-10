@@ -43,6 +43,10 @@ class Materials extends Endpoint {
 		return this.requestJSON(accessToken, 'PUT', `materials/${id}/${version}/remove`)
 	}
 
+	archive(accessToken, id, version) {
+		return this.requestJSON(accessToken, 'PUT', `materials/${id}/${version}/archive`)
+	}
+
 	request(accessToken, id, version) {
 		return this.requestJSON(accessToken, 'PUT', `materials/${id}/${version}/request`)
 	}
@@ -54,7 +58,8 @@ class Materials extends Endpoint {
 			sort = undefined,
 			isActive = undefined,
 			isMarkedForRemoval = undefined,
-			isDropdown = undefined
+			isDropdown = undefined,
+			isArchived = undefined
 		},
 		{page = undefined, count = undefined}
 	) {
@@ -67,6 +72,7 @@ class Materials extends Endpoint {
 				isActive,
 				isMarkedForRemoval,
 				isDropdown,
+				isArchived,
 				page,
 				count
 			})}`,
@@ -76,6 +82,7 @@ class Materials extends Endpoint {
 				isActive,
 				isMarkedForRemoval,
 				isDropdown,
+				isArchived,
 				page,
 				count
 			},

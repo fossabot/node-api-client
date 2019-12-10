@@ -47,7 +47,8 @@ class Badges extends Endpoint {
 			sort = undefined,
 			isActive = undefined,
 			isMarkedForRemoval = undefined,
-			isDropdown = undefined
+			isDropdown = undefined,
+			isArchived = undefined
 		},
 		{page = undefined, count = undefined}
 	) {
@@ -60,6 +61,7 @@ class Badges extends Endpoint {
 				isActive,
 				isMarkedForRemoval,
 				isDropdown,
+				isArchived,
 				page,
 				count
 			})}`,
@@ -69,6 +71,7 @@ class Badges extends Endpoint {
 				isActive,
 				isMarkedForRemoval,
 				isDropdown,
+				isArchived,
 				page,
 				count
 			},
@@ -78,6 +81,10 @@ class Badges extends Endpoint {
 
 	remove(accessToken, id, version) {
 		return this.requestJSON(accessToken, 'PUT', `badges/${id}/${version}/remove`)
+	}
+
+	archive(accessToken, id, version) {
+		return this.requestJSON(accessToken, 'PUT', `badges/${id}/${version}/archive`)
 	}
 
 	request(accessToken, id, version) {

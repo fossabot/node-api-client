@@ -20,9 +20,12 @@ class Companies extends Endpoint {
 			phone1,
 			phone2,
 			website,
-			latitude,
-			longitude,
-			description
+			geojson,
+			description,
+			videoUrl,
+			companySize,
+			companyType,
+			founded
 		}
 	) {
 		return this.requestJSON(
@@ -44,9 +47,12 @@ class Companies extends Endpoint {
 				phone1,
 				phone2,
 				website,
-				latitude,
-				longitude,
-				description
+				geojson,
+				description,
+				videoUrl,
+				companySize,
+				companyType,
+				founded
 			},
 			schemas.request.company.create.body
 		)
@@ -64,6 +70,10 @@ class Companies extends Endpoint {
 
 	remove(accessToken, id) {
 		return this.requestJSON(accessToken, 'PUT', `companies/${id}/remove`)
+	}
+
+	archive(accessToken, id) {
+		return this.requestJSON(accessToken, 'PUT', `companies/${id}/archive`)
 	}
 
 	find(accessToken, {country, taxNo}) {
@@ -86,19 +96,46 @@ class Companies extends Endpoint {
 		)
 	}
 
-	list(accessToken, {dropdownlist = undefined, page = undefined, count = undefined}) {
+	list(
+		accessToken,
+		{
+			sort = undefined,
+			isMarkedForRemoval = undefined,
+			country = undefined,
+			founded = undefined,
+			companySize = undefined,
+			companyType = undefined,
+			isArchived = undefined,
+			isDropdown = undefined
+		},
+		{page = undefined, count = undefined}
+	) {
 		return this.requestJSON(
 			accessToken,
 			'GET',
 			`companies?${stringify({
-				dropdownlist,
+				sort,
 				page,
-				count
+				count,
+				isMarkedForRemoval,
+				country,
+				founded,
+				companySize,
+				companyType,
+				isArchived,
+				isDropdown
 			})}`,
 			{
-				dropdownlist,
+				sort,
 				page,
-				count
+				count,
+				isMarkedForRemoval,
+				country,
+				founded,
+				companySize,
+				companyType,
+				isArchived,
+				isDropdown
 			},
 			schemas.request.company.list.querystring
 		)
@@ -108,7 +145,6 @@ class Companies extends Endpoint {
 		accessToken,
 		id,
 		{
-			officialName,
 			name,
 			county,
 			pictures,
@@ -120,9 +156,12 @@ class Companies extends Endpoint {
 			phone1,
 			phone2,
 			website,
-			latitude,
-			longitude,
-			description
+			geojson,
+			description,
+			videoUrl,
+			companySize,
+			companyType,
+			founded
 		}
 	) {
 		return this.requestJSON(
@@ -130,7 +169,6 @@ class Companies extends Endpoint {
 			'PUT',
 			`companies/${id}`,
 			{
-				officialName,
 				name,
 				county,
 				pictures,
@@ -142,9 +180,12 @@ class Companies extends Endpoint {
 				phone1,
 				phone2,
 				website,
-				latitude,
-				longitude,
-				description
+				geojson,
+				description,
+				videoUrl,
+				companySize,
+				companyType,
+				founded
 			},
 			schemas.request.company.update.body
 		)

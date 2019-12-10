@@ -2,12 +2,12 @@ const schemas = require('@retracedgmbh/schemas')
 const Endpoint = require('../endpoint')
 
 class UploadUrl extends Endpoint {
-	create(accessToken, isPublic, {filename, longitude, latitude}) {
+	create(accessToken, isPublic, {filename, geojson}) {
 		return this.requestJSON(
 			accessToken,
 			'POST',
 			`upload-url?public=${isPublic}`,
-			{filename, longitude, latitude},
+			{filename, geojson},
 			schemas.request.uploadUrl.create.body
 		)
 	}

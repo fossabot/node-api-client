@@ -70,6 +70,7 @@ class Claims extends Endpoint {
 			isActive = undefined,
 			isMarkedForRemoval = undefined,
 			isDropdown = undefined,
+			isArchived = undefined,
 			companyId = undefined
 		},
 		{page = undefined, count = undefined}
@@ -83,6 +84,7 @@ class Claims extends Endpoint {
 				isActive,
 				isMarkedForRemoval,
 				isDropdown,
+				isArchived,
 				companyId,
 				page,
 				count
@@ -93,6 +95,7 @@ class Claims extends Endpoint {
 				isActive,
 				isMarkedForRemoval,
 				isDropdown,
+				isArchived,
 				companyId,
 				page,
 				count
@@ -103,6 +106,10 @@ class Claims extends Endpoint {
 
 	remove(accessToken, id, version) {
 		return this.requestJSON(accessToken, 'PUT', `claims/${id}/${version}/remove`)
+	}
+
+	archive(accessToken, id, version) {
+		return this.requestJSON(accessToken, 'PUT', `claims/${id}/${version}/archive`)
 	}
 
 	request(accessToken, id, version) {

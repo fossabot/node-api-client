@@ -45,7 +45,8 @@ class Certificates extends Endpoint {
 			sort = undefined,
 			isActive = undefined,
 			isMarkedForRemoval = undefined,
-			isDropdown = undefined
+			isDropdown = undefined,
+			isArchived = undefined
 		},
 		{page = undefined, count = undefined}
 	) {
@@ -58,6 +59,7 @@ class Certificates extends Endpoint {
 				isActive,
 				isMarkedForRemoval,
 				isDropdown,
+				isArchived,
 				page,
 				count
 			})}`,
@@ -67,6 +69,7 @@ class Certificates extends Endpoint {
 				isActive,
 				isMarkedForRemoval,
 				isDropdown,
+				isArchived,
 				page,
 				count
 			},
@@ -76,6 +79,10 @@ class Certificates extends Endpoint {
 
 	remove(accessToken, id, version) {
 		return this.requestJSON(accessToken, 'PUT', `certificates/${id}/${version}/remove`)
+	}
+
+	archive(accessToken, id, version) {
+		return this.requestJSON(accessToken, 'PUT', `certificates/${id}/${version}/archive`)
 	}
 
 	request(accessToken, id, version) {
