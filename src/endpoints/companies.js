@@ -100,7 +100,7 @@ class Companies extends Endpoint {
 			companySize = undefined,
 			companyType = undefined,
 			isArchived = undefined,
-			isDropdown = undefined
+			isDropDown = undefined
 		},
 		{page = undefined, count = undefined}
 	) {
@@ -117,7 +117,7 @@ class Companies extends Endpoint {
 				companySize,
 				companyType,
 				isArchived,
-				isDropdown
+				isDropDown
 			})}`,
 			{
 				sort,
@@ -129,7 +129,7 @@ class Companies extends Endpoint {
 				companySize,
 				companyType,
 				isArchived,
-				isDropdown
+				isDropDown
 			},
 			schemas.request.company.list.querystring
 		)
