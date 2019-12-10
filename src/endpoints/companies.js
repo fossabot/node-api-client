@@ -86,14 +86,8 @@ class Companies extends Endpoint {
 		)
 	}
 
-	get(accessToken, id, {statistics = undefined}) {
-		return this.requestJSON(
-			accessToken,
-			'GET',
-			`companies/${id}?${stringify({statistics})}`,
-			{statistics},
-			schemas.request.company.get.querystring
-		)
+	get(accessToken, id) {
+		return this.requestJSON(accessToken, 'GET', `companies/${id}`)
 	}
 
 	list(
