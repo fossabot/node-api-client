@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/retracedgmbh/node-api-client/compare/v1.5.3...v1.6.0) (2019-12-12)
+
+
+### Features
+
+* Add video file extensions ([#15](https://github.com/retracedgmbh/node-api-client/issues/15)) ([ad75015](https://github.com/retracedgmbh/node-api-client/commit/ad75015e380d5ed54932eec8a831c86ee3c8390b))
+
 ## [1.5.3](https://github.com/retracedgmbh/node-api-client/compare/v1.5.2...v1.5.3) (2019-12-12)
 
 ## [1.5.2](https://github.com/retracedgmbh/node-api-client/compare/v1.5.1...v1.5.2) (2019-12-10)
