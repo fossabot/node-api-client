@@ -3,7 +3,7 @@ const schemas = require('@retracedgmbh/schemas')
 const Endpoint = require('../endpoint')
 
 class Products extends Endpoint {
-	create(accessToken, {supplyChainId, name, pictures, i18n, attributes}) {
+	create(accessToken, {supplyChainId, name, pictures, description, attributes}) {
 		return this.requestJSON(
 			accessToken,
 			'POST',
@@ -12,7 +12,7 @@ class Products extends Endpoint {
 				supplyChainId,
 				name,
 				pictures,
-				i18n,
+				description,
 				attributes
 			},
 			schemas.request.product.create.body
@@ -53,12 +53,12 @@ class Products extends Endpoint {
 		)
 	}
 
-	update(accessToken, id, {supplyChainId, name, pictures, i18n, attributes, variations}) {
+	update(accessToken, id, {supplyChainId, name, pictures, description, attributes, variations}) {
 		return this.requestJSON(
 			accessToken,
 			'PUT',
 			`products/${id}`,
-			{id, supplyChainId, name, pictures, i18n, attributes, variations},
+			{id, supplyChainId, name, pictures, description, attributes, variations},
 			schemas.request.product.update.body
 		)
 	}

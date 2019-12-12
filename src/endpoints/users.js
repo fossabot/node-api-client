@@ -5,7 +5,7 @@ const Endpoint = require('../endpoint')
 class Users extends Endpoint {
 	create(
 		accessToken,
-		{companyId, email, phone, firstName, middleName, lastName, lang, role, isBlocked, password, i18n, pictures}
+		{companyId, email, phone, firstName, middleName, lastName, lang, role, isBlocked, password, description, pictures}
 	) {
 		return this.requestJSON(
 			accessToken,
@@ -22,7 +22,7 @@ class Users extends Endpoint {
 				role,
 				isBlocked,
 				password,
-				i18n,
+				description,
 				pictures
 			},
 			schemas.request.user.create.body
@@ -59,13 +59,13 @@ class Users extends Endpoint {
 	update(
 		accessToken,
 		id,
-		{companyId, firstName, middleName, lastName, lang, role, isBlocked, passwordReset, i18n, pictures}
+		{companyId, firstName, middleName, lastName, lang, role, isBlocked, passwordReset, description, pictures}
 	) {
 		return this.requestJSON(
 			accessToken,
 			'PUT',
 			`users/${id}`,
-			{companyId, firstName, middleName, lastName, lang, role, isBlocked, passwordReset, i18n, pictures},
+			{companyId, firstName, middleName, lastName, lang, role, isBlocked, passwordReset, description, pictures},
 			schemas.request.user.update.body
 		)
 	}
