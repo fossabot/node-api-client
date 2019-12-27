@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/retracedgmbh/node-api-client/compare/v1.6.1...v1.7.0) (2019-12-27)
+
+
+### Features
+
+* AJV validate clone data instead of original data ([#18](https://github.com/retracedgmbh/node-api-client/issues/18)) ([4422b30](https://github.com/retracedgmbh/node-api-client/commit/4422b30a59192d832dd1c2b71102f21631f69117))
+
 ## [1.6.1](https://github.com/retracedgmbh/node-api-client/compare/v1.6.0...v1.6.1) (2019-12-27)
 
 # [1.6.0](https://github.com/retracedgmbh/node-api-client/compare/v1.5.3...v1.6.0) (2019-12-12)
