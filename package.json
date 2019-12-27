@@ -138,7 +138,8 @@
     "@retracedgmbh/schemas": "^1.19.0",
     "ajv": "^6.10.2",
     "axios": "^0.19.0",
-    "query-string": "^6.8.3"
+    "query-string": "^6.8.3",
+    "ramda": "0.26.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "3.0.6",
