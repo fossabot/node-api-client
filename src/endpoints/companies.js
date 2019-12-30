@@ -25,6 +25,7 @@ class Companies extends Endpoint {
 			videoUrl,
 			companySize,
 			companyType,
+			founders,
 			founded
 		}
 	) {
@@ -52,6 +53,7 @@ class Companies extends Endpoint {
 				videoUrl,
 				companySize,
 				companyType,
+				founders,
 				founded
 			},
 			schemas.request.company.create.body
@@ -155,6 +157,7 @@ class Companies extends Endpoint {
 			videoUrl,
 			companySize,
 			companyType,
+			founders,
 			founded
 		}
 	) {
@@ -179,6 +182,7 @@ class Companies extends Endpoint {
 				videoUrl,
 				companySize,
 				companyType,
+				founders,
 				founded
 			},
 			schemas.request.company.update.body

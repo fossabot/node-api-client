@@ -6,7 +6,7 @@ describe('AJV validation test', () => {
 		test('Validate simple object', async () => {
 			const data = {id: 'test-id', url: 'file://url'}
 
-			const returnedData = utils.ajvValidate(schemas.request.picture.single, data)
+			const returnedData = utils.ajvValidate(schemas.request.file.single, data)
 
 			expect(returnedData.id).toEqual('test-id')
 			expect(returnedData.url).toEqual(undefined)
@@ -25,7 +25,7 @@ describe('AJV validation test', () => {
 				}
 			]
 
-			const returnedData = utils.ajvValidate(schemas.request.picture.list, data)
+			const returnedData = utils.ajvValidate(schemas.request.file.list, data)
 			expect(returnedData[0].id).toEqual('id1')
 			expect(returnedData[0].url).toEqual(undefined)
 			expect(data[0].url).toEqual('file://id1')
@@ -38,7 +38,7 @@ describe('AJV validation test', () => {
 				additionalProperties: false,
 				properties: {
 					name: {type: 'string', minLength: 1},
-					pictures: schemas.request.picture.list
+					pictures: schemas.request.file.list
 				}
 			}
 
