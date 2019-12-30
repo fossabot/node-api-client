@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/retracedgmbh/node-api-client/compare/v1.7.0...v1.8.0) (2019-12-30)
+
+
+### Features
+
+* Add founders to company ([#19](https://github.com/retracedgmbh/node-api-client/issues/19)) ([999de1e](https://github.com/retracedgmbh/node-api-client/commit/999de1e26e4336bdc868a4ca5dab24016d3820be))
+
 # [1.7.0](https://github.com/retracedgmbh/node-api-client/compare/v1.6.1...v1.7.0) (2019-12-27)
 
 
