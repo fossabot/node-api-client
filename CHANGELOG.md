@@ -1,3 +1,5 @@
+## [1.8.5](https://github.com/retracedgmbh/node-api-client/compare/v1.8.4...v1.8.5) (2020-01-08)
+
 ## [1.8.4](https://github.com/retracedgmbh/node-api-client/compare/v1.8.3...v1.8.4) (2020-01-08)
 
 ## [1.8.3](https://github.com/retracedgmbh/node-api-client/compare/v1.8.2...v1.8.3) (2020-01-07)
