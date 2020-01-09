@@ -149,7 +149,7 @@
     "@semantic-release/release-notes-generator": "7.3.5",
     "husky": "4.0.1",
     "jest": "24.9.0",
-    "nock": "11.7.1",
+    "nock": "11.7.2",
     "prettier": "1.19.1",
     "xo": "0.25.3"
   }
