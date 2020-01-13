@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/retracedgmbh/node-api-client/compare/v1.8.12...v1.9.0) (2020-01-13)
+
+
+### Features
+
+* Product and Supply Chain merge ([#31](https://github.com/retracedgmbh/node-api-client/issues/31)) ([1fe4d4d](https://github.com/retracedgmbh/node-api-client/commit/1fe4d4d6edef7b07f68abacd30ee17e8d5ac9504))
+
 ## [1.8.12](https://github.com/retracedgmbh/node-api-client/compare/v1.8.11...v1.8.12) (2020-01-12)
 
 ## [1.8.11](https://github.com/retracedgmbh/node-api-client/compare/v1.8.10...v1.8.11) (2020-01-11)
