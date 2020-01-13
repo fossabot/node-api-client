@@ -33,7 +33,7 @@ class Tags extends Endpoint {
 		return this.requestJSON(
 			accessToken,
 			'GET',
-			`tags?${stringify({productId, sku})}`,
+			`tags/random?${stringify({productId, sku})}`,
 			{productId, sku},
 			schemas.request.tag.random.querystring
 		)
