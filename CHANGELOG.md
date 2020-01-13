@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/retracedgmbh/node-api-client/compare/v1.9.0...v1.9.1) (2020-01-13)
+
+
+### Bug Fixes
+
+* tags random ([3800d99](https://github.com/retracedgmbh/node-api-client/commit/3800d99c67c540cb40cfc3f9e3bb5701f67e6d79))
+
 # [1.9.0](https://github.com/retracedgmbh/node-api-client/compare/v1.8.12...v1.9.0) (2020-01-13)
 
 
