@@ -45,7 +45,7 @@ class Certificates extends Endpoint {
 			sort = undefined,
 			isActive = undefined,
 			isMarkedForRemoval = undefined,
-			isDropdown = undefined,
+			isDropDown = undefined,
 			isArchived = undefined
 		},
 		{page = undefined, count = undefined}
@@ -58,7 +58,7 @@ class Certificates extends Endpoint {
 				sort,
 				isActive,
 				isMarkedForRemoval,
-				isDropdown,
+				isDropDown,
 				isArchived,
 				page,
 				count
@@ -68,7 +68,7 @@ class Certificates extends Endpoint {
 				sort,
 				isActive,
 				isMarkedForRemoval,
-				isDropdown,
+				isDropDown,
 				isArchived,
 				page,
 				count

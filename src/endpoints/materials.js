@@ -3,7 +3,7 @@ const schemas = require('@retracedgmbh/schemas')
 const Endpoint = require('../endpoint')
 
 class Materials extends Endpoint {
-	create(accessToken, {title, description, externalLink, categories, pictures}) {
+	create(accessToken, {title, description, externalLink, pictures}) {
 		return this.requestJSON(
 			accessToken,
 			'POST',
@@ -12,7 +12,6 @@ class Materials extends Endpoint {
 				title,
 				description,
 				externalLink,
-				categories,
 				pictures
 			},
 			schemas.request.material.create.body
@@ -58,7 +57,7 @@ class Materials extends Endpoint {
 			sort = undefined,
 			isActive = undefined,
 			isMarkedForRemoval = undefined,
-			isDropdown = undefined,
+			isDropDown = undefined,
 			isArchived = undefined
 		},
 		{page = undefined, count = undefined}
@@ -71,7 +70,7 @@ class Materials extends Endpoint {
 				sort,
 				isActive,
 				isMarkedForRemoval,
-				isDropdown,
+				isDropDown,
 				isArchived,
 				page,
 				count
@@ -81,7 +80,7 @@ class Materials extends Endpoint {
 				sort,
 				isActive,
 				isMarkedForRemoval,
-				isDropdown,
+				isDropDown,
 				isArchived,
 				page,
 				count
@@ -90,7 +89,7 @@ class Materials extends Endpoint {
 		)
 	}
 
-	createNewVersion(accessToken, id, {title, description, externalLink, categories, pictures}) {
+	createNewVersion(accessToken, id, {title, description, externalLink, pictures}) {
 		return this.requestJSON(
 			accessToken,
 			'POST',
@@ -99,14 +98,13 @@ class Materials extends Endpoint {
 				title,
 				description,
 				externalLink,
-				categories,
 				pictures
 			},
 			schemas.request.material.update.body
 		)
 	}
 
-	update(accessToken, id, version, {title, description, externalLink, categories, pictures}) {
+	update(accessToken, id, version, {title, description, externalLink, pictures}) {
 		return this.requestJSON(
 			accessToken,
 			'PUT',
@@ -115,7 +113,6 @@ class Materials extends Endpoint {
 				title,
 				description,
 				externalLink,
-				categories,
 				pictures
 			},
 			schemas.request.material.update.body

@@ -47,7 +47,7 @@ class Badges extends Endpoint {
 			sort = undefined,
 			isActive = undefined,
 			isMarkedForRemoval = undefined,
-			isDropdown = undefined,
+			isDropDown = undefined,
 			isArchived = undefined
 		},
 		{page = undefined, count = undefined}
@@ -60,7 +60,7 @@ class Badges extends Endpoint {
 				sort,
 				isActive,
 				isMarkedForRemoval,
-				isDropdown,
+				isDropDown,
 				isArchived,
 				page,
 				count
@@ -70,7 +70,7 @@ class Badges extends Endpoint {
 				sort,
 				isActive,
 				isMarkedForRemoval,
-				isDropdown,
+				isDropDown,
 				isArchived,
 				page,
 				count
