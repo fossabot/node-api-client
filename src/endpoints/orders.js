@@ -17,6 +17,14 @@ class Orders extends Endpoint {
 		return this.requestJSON(accessToken, 'POST', `orders`, {variations}, schemas.request.order.create.body)
 	}
 
+	delete(accessToken, id) {
+		return this.requestJSON(accessToken, 'DELETE', `orders/${id}`)
+	}
+
+	remove(accessToken, id) {
+		return this.requestJSON(accessToken, 'PUT', `orders/${id}/remove`)
+	}
+
 	get(accessToken, id, {deep = undefined, lines = undefined}) {
 		return this.requestJSON(
 			accessToken,
