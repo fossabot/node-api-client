@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/retracedgmbh/node-api-client/compare/v1.9.3...v1.10.0) (2020-01-15)
+
+
+### Features
+
+* Extend orders endpoint ([#36](https://github.com/retracedgmbh/node-api-client/issues/36)) ([2eaa421](https://github.com/retracedgmbh/node-api-client/commit/2eaa42149e990d0be8c2c01119896d4e3db200a5))
+
 ## [1.9.3](https://github.com/retracedgmbh/node-api-client/compare/v1.9.2...v1.9.3) (2020-01-15)
 
 ## [1.9.2](https://github.com/retracedgmbh/node-api-client/compare/v1.9.1...v1.9.2) (2020-01-14)
