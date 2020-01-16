@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/retracedgmbh/node-api-client/compare/v1.10.2...v1.11.0) (2020-01-16)
+
+
+### Features
+
+* Add logoFileId to certificates: ([#39](https://github.com/retracedgmbh/node-api-client/issues/39)) ([0e3ccc2](https://github.com/retracedgmbh/node-api-client/commit/0e3ccc212475d28918c941c51c54d0b21d3b79f3))
+
 ## [1.10.2](https://github.com/retracedgmbh/node-api-client/compare/v1.10.1...v1.10.2) (2020-01-16)
 
 ## [1.10.1](https://github.com/retracedgmbh/node-api-client/compare/v1.10.0...v1.10.1) (2020-01-16)
