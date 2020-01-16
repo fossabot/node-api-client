@@ -3,7 +3,7 @@ const schemas = require('@retracedgmbh/schemas')
 const Endpoint = require('../endpoint')
 
 class Certificates extends Endpoint {
-	create(accessToken, {title, description, externalLink, pictures}) {
+	create(accessToken, {title, description, externalLink, logoFileId, pictures}) {
 		return this.requestJSON(
 			accessToken,
 			'POST',
@@ -12,6 +12,7 @@ class Certificates extends Endpoint {
 				title,
 				description,
 				externalLink,
+				logoFileId,
 				pictures
 			},
 			schemas.request.certificate.create.body
@@ -89,7 +90,7 @@ class Certificates extends Endpoint {
 		return this.requestJSON(accessToken, 'PUT', `certificates/${id}/${version}/request`)
 	}
 
-	createNewVersion(accessToken, id, {title, description, externalLink, pictures}) {
+	createNewVersion(accessToken, id, {title, description, externalLink, logoFileId, pictures}) {
 		return this.requestJSON(
 			accessToken,
 			'POST',
@@ -98,13 +99,14 @@ class Certificates extends Endpoint {
 				title,
 				description,
 				externalLink,
+				logoFileId,
 				pictures
 			},
 			schemas.request.certificate.update.body
 		)
 	}
 
-	update(accessToken, id, version, {title, description, externalLink, pictures}) {
+	update(accessToken, id, version, {title, description, externalLink, logoFileId, pictures}) {
 		return this.requestJSON(
 			accessToken,
 			'PUT',
@@ -113,6 +115,7 @@ class Certificates extends Endpoint {
 				title,
 				description,
 				externalLink,
+				logoFileId,
 				pictures
 			},
 			schemas.request.certificate.update.body
