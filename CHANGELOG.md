@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/retracedgmbh/node-api-client/compare/v1.12.0...v1.12.1) (2020-01-27)
+
+
+### Bug Fixes
+
+* Typo on requestJSON ([#47](https://github.com/retracedgmbh/node-api-client/issues/47)) ([d232bb4](https://github.com/retracedgmbh/node-api-client/commit/d232bb4940668eb9620ad183ebdb46caf6138c07))
+
 # [1.12.0](https://github.com/retracedgmbh/node-api-client/compare/v1.11.6...v1.12.0) (2020-01-27)
 
 
