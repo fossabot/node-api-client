@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/retracedgmbh/node-api-client/compare/v1.11.6...v1.12.0) (2020-01-27)
+
+
+### Features
+
+* Add analytics endpoint ([#46](https://github.com/retracedgmbh/node-api-client/issues/46)) ([673ae41](https://github.com/retracedgmbh/node-api-client/commit/673ae41069067a4da6fc4b66178a1e7cac517476))
+
 ## [1.11.6](https://github.com/retracedgmbh/node-api-client/compare/v1.11.5...v1.11.6) (2020-01-24)
 
 ## [1.11.5](https://github.com/retracedgmbh/node-api-client/compare/v1.11.4...v1.11.5) (2020-01-22)
