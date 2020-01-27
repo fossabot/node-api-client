@@ -16,6 +16,7 @@ const Claims = require('./endpoints/claims')
 const Badges = require('./endpoints/badges')
 const Configuration = require('./endpoints/configuration')
 const Search = require('./endpoints/search')
+const Analytics = require('./endpoints/analytics')
 
 class Client {
 	constructor(url = 'https://api.retraced.co') {
@@ -37,6 +38,7 @@ class Client {
 		this.badges = new Badges(url)
 		this.configuration = new Configuration(url)
 		this.search = new Search(url)
+		this.analytics = new Analytics(url)
 	}
 }
 
