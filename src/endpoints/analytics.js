@@ -2,7 +2,9 @@ const Endpoint = require('../endpoint')
 
 class Analytics extends Endpoint {
 	get(accessToken, {type, start, end}) {
-		return this.requestJSON(accessToken, 'GET', `analytics/analysis?type=${type}&start=${start}&end=${end}`)
+		const startParam = start ? `&start=${start}` : ''
+		const endParam = end ? `&end=${end}` : ''
+		return this.requestJSON(accessToken, 'GET', `analytics/analysis?type=${type}${startParam}${endParam}`)
 	}
 }
 
