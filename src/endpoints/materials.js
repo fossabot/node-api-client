@@ -3,7 +3,7 @@ const schemas = require('@retracedgmbh/schemas')
 const Endpoint = require('../endpoint')
 
 class Materials extends Endpoint {
-	create(accessToken, {title, description, externalLink, pictures}) {
+	create(accessToken, {title, description, pictures}) {
 		return this.requestJSON(
 			accessToken,
 			'POST',
@@ -11,7 +11,6 @@ class Materials extends Endpoint {
 			{
 				title,
 				description,
-				externalLink,
 				pictures
 			},
 			schemas.request.material.create.body
@@ -97,7 +96,6 @@ class Materials extends Endpoint {
 			{
 				title,
 				description,
-				externalLink,
 				pictures
 			},
 			schemas.request.material.update.body
@@ -112,7 +110,6 @@ class Materials extends Endpoint {
 			{
 				title,
 				description,
-				externalLink,
 				pictures
 			},
 			schemas.request.material.update.body
