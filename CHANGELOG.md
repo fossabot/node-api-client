@@ -1,3 +1,10 @@
+## [1.12.3](https://github.com/retracedgmbh/node-api-client/compare/v1.12.2...v1.12.3) (2020-01-28)
+
+
+### Bug Fixes
+
+* Analytics endpoint check start and end params ([#49](https://github.com/retracedgmbh/node-api-client/issues/49)) ([1b9549a](https://github.com/retracedgmbh/node-api-client/commit/1b9549a097ede120a033b51b7ee24b1ef5b37c51))
+
 ## [1.12.2](https://github.com/retracedgmbh/node-api-client/compare/v1.12.1...v1.12.2) (2020-01-28)
 
 ## [1.12.1](https://github.com/retracedgmbh/node-api-client/compare/v1.12.0...v1.12.1) (2020-01-27)
